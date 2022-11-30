@@ -1,5 +1,5 @@
-from dominance_analysis import Dominance
 import pandas as pd
+from dominance_analysis import Dominance
 
 data = pd.read_csv("data/Data_4_Variables.csv")
 dominance = Dominance(data, "Y")
