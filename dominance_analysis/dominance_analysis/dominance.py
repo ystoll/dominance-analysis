@@ -12,6 +12,7 @@ from plotly.offline import init_notebook_mode, iplot
 import cufflinks as cf
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import log_loss
+
 # from scipy.misc import factorial
 from scipy.special import factorial
 import statsmodels.api as sm
@@ -368,7 +369,8 @@ class Dominance:
             tools=TOOLS,
             x_range=list(df.index),
             y_range=(0, net + 10),
-            plot_width=1000,
+            #plot_width=1000,
+            width=1000,
             title="Percentage Relative Importance Waterfall",
         )
 
