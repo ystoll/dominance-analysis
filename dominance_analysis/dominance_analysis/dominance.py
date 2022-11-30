@@ -1,18 +1,18 @@
 import math
-import random
-from functools import reduce
+# import random
+# from functools import reduce
 from itertools import combinations
 
-import cufflinks as cf
+# import cufflinks as cf
 import numpy as np
 import pandas as pd
-import sklearn
+# import sklearn
 import statsmodels.api as sm
 from bokeh.io import output_notebook
 from bokeh.models import ColumnDataSource, LabelSet
 from bokeh.models.formatters import NumeralTickFormatter
 from bokeh.plotting import figure, show
-from plotly import offline
+# from plotly import offline
 from plotly.offline import init_notebook_mode, iplot
 # from scipy.misc import factorial
 from scipy.special import factorial
@@ -20,7 +20,7 @@ from sklearn.datasets import load_boston, load_breast_cancer
 from sklearn.feature_selection import (SelectKBest, chi2, f_classif,
                                        f_regression)
 from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.metrics import log_loss
+# from sklearn.metrics import log_loss
 from tqdm import tqdm
 
 output_notebook()
