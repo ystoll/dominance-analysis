@@ -3,7 +3,7 @@ import math
 # from functools import reduce
 from itertools import combinations
 
-# import cufflinks as cf
+import cufflinks as cf
 import numpy as np
 import pandas as pd
 # import sklearn
@@ -16,7 +16,7 @@ from bokeh.plotting import figure, show
 from plotly.offline import init_notebook_mode, iplot
 # from scipy.misc import factorial
 from scipy.special import factorial
-from sklearn.datasets import load_boston, load_breast_cancer
+from sklearn.datasets import load_boston, load_breast_cancer, fetch_california_housing
 from sklearn.feature_selection import (SelectKBest, chi2, f_classif,
                                        f_regression)
 from sklearn.linear_model import LinearRegression, LogisticRegression
@@ -810,6 +810,22 @@ class Dominance_Datasets:
         )
         boston_data["House_Price"] = load_boston()["target"]
         return boston_data
+
+    def __init__(self):
+        print("Datasets for Dominance Analysis")
+
+
+    @classmethod
+    def get_california(cls):
+        # print(
+        #     """The copy of Boston Housing Dataset is downloaded from: https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html"""
+        # )
+        print("""Internally using fetch_california_housing function from sklearn.datasets """)
+        california_data = pd.DataFrame(
+            data=fetch_california_housing()["data"], columns=fetch_california_housing()["feature_names"]
+        )
+        california_data["House_Price"] = fetch_california_housing()["target"]
+        return california_data
 
     def __init__(self):
         print("Datasets for Dominance Analysis")
